@@ -1,5 +1,5 @@
 const config = {
-	apiRootUrl: 'http://localhost:9004'
+	apiRootUrl: 'https://virtuoso-hitch-ringer.herokuapp.com/'
 };
 
 export default config;
