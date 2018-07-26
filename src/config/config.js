@@ -1,4 +1,4 @@
-import './env';
+import '../env';
 
 const config = {
 	apiDomain: process.env.API_DOMAIN
