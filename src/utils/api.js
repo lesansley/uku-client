@@ -1,7 +1,7 @@
 import config from '../config/config';
 import urljoin from 'url-join';
 
-const { apiRootUrl } = config;
+const { apiDomain } = config;
 
 /**
  * Requests qrCode & link from uport server
@@ -15,7 +15,7 @@ const { apiRootUrl } = config;
  * @returns
  */
 export const requestApi = async payload => {
-	const response = await fetch(urljoin(apiRootUrl, payload.type), {
+	const response = await fetch(urljoin(apiDomain, payload.type), {
 		method: 'POST',
 		headers: {
 			Accept: 'application/json',
@@ -34,7 +34,7 @@ export const requestApi = async payload => {
 
 export const pollRequestApi = (ref, signal) => {
 	const pollApi = (resolve, reject) => {
-		fetch(urljoin(apiRootUrl, ref), {
+		fetch(urljoin(apiDomain, ref), {
 			signal,
 			method: 'POST',
 			headers: {

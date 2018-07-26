@@ -1,5 +1,7 @@
+import './env';
+
 const config = {
-	apiRootUrl: 'https://virtuoso-hitch-ringer.herokuapp.com/'
+	apiDomain: process.env.API_DOMAIN
 };
 
 export default config;
