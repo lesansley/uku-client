@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import { applyMiddleware, compose, createStore } from 'redux';
 import { connectRouter, routerMiddleware } from 'connected-react-router';
 import { Provider } from 'react-redux';
+import dotenv from 'dotenv';
 
 import 'semantic-ui-css/semantic.min.css';
 import './index.css';
@@ -12,6 +13,10 @@ import App from './App';
 import history from './history';
 import rootReducer from './reducers';
 import registerServiceWorker from './registerServiceWorker';
+
+console.log('dotenv', dotenv);
+dotenv.config();
+console.log('Env var', process.env);
 
 const initialState = {};
 const store = createStore(

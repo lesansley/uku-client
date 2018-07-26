@@ -1,7 +1,5 @@
-import '../env';
-
 const config = {
-	apiDomain: process.env.API_DOMAIN
+	apiDomain: process.env.REACT_APP_API_DOMAIN
 };
 
 export default config;

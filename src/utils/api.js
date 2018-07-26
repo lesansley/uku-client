@@ -15,6 +15,7 @@ const { apiDomain } = config;
  * @returns
  */
 export const requestApi = async payload => {
+	console.log('Api Domain', apiDomain);
 	const response = await fetch(urljoin(apiDomain, payload.type), {
 		method: 'POST',
 		headers: {
