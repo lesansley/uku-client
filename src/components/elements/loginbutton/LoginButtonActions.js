@@ -4,8 +4,6 @@ const abortController = new window.AbortController();
 const signal = abortController.signal;
 
 const loginUser = async ({ userLogin, history }) => {
-	console.log('EV', process.env);
-	// DISPLAY QR CODE
 	const response = await api.requestApi(
 		{
 			type: 'request',

@@ -14,9 +14,7 @@ import history from './history';
 import rootReducer from './reducers';
 import registerServiceWorker from './registerServiceWorker';
 
-console.log('dotenv', dotenv);
 dotenv.config();
-console.log('Env var', process.env);
 
 const initialState = {};
 const store = createStore(
